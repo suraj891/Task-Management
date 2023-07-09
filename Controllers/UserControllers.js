@@ -25,7 +25,7 @@ const Login = asynchandler(async (req, res) => {
                 email: user.email,
                 id: user.id
             }
-        }, process.env.ACCESS_TOKEN_SECERT, { expiresIn: "30m" })
+        }, process.env.ACCESS_TOKEN_SECERT, { expiresIn: "300m" })
         res.status(200).json({ accessToken })
     } else {
         res.status(401);
